@@ -1,0 +1,42 @@
+{
+  "name": "vibe-iseven",
+  "version": "1.0.0",
+  "description": "Determines if a number is even using OpenAI API - because why not add some AI magic to basic math!",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "even",
+    "odd",
+    "number",
+    "openai",
+    "ai",
+    "math",
+    "vibe"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/vibe-iseven.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/vibe-iseven/issues"
+  },
+  "homepage": "https://github.com/yourusername/vibe-iseven#readme"
+}
