@@ -16,8 +16,7 @@ console.log(result);
 //   number: 42,
 //   isEven: true,
 //   confidence: 0.95,
-//   reasoning: "The number 42 divides perfectly by 2, leaving no remainder",
-//   vibe: "This number radiates cosmic harmony and balance ✨"
+//   reasoning: "The number 42 divides perfectly by 2, leaving no remainder"
 // }
 ```
 
@@ -38,8 +37,7 @@ console.log(result);
 //   number: 13,
 //   isEven: false,
 //   confidence: 0.99,
-//   reasoning: "13 divided by 2 gives 6.5, indicating an odd number",
-//   vibe: "This prime number pulses with rebellious, untamed energy 🔥"
+//   reasoning: "13 divided by 2 gives 6.5, indicating an odd number"
 // }
 ```
 
@@ -51,7 +49,7 @@ const numbers = [2, 3, 4, 5, 6];
 const results = await checker.checkMultiple(numbers);
 
 results.forEach(result => {
-  console.log(`${result.number}: ${result.isEven ? 'Even' : 'Odd'} - ${result.vibe}`);
+  console.log(`${result.number}: ${result.isEven ? 'Even' : 'Odd'} (${result.confidence * 100}% confident)`);
 });
 ```
 
@@ -74,7 +72,7 @@ try {
 ## ✨ Features
 
 - 🤖 **AI-Powered**: Uses OpenAI's GPT models to determine if numbers are even
-- 🎭 **Mystical Vibes**: Get creative reasoning and energy readings for each number
+- 🧠 **AI Reasoning**: Get detailed explanations for the mathematical determination
 - 📊 **Confidence Scoring**: AI provides confidence levels for its mathematical intuition
 - 🛡️ **Fallback Logic**: Mathematical backup in case the AI gets too creative
 - 🚀 **TypeScript**: Full type safety and IntelliSense support
@@ -144,19 +142,18 @@ interface VibeIsEvenResult {
   isEven: boolean;       // true if even, false if odd
   confidence: number;    // AI confidence level (0-1)
   reasoning: string;     // AI's mathematical explanation
-  vibe: string;         // Mystical energy reading of the number
 }
 ```
 
 ## 🎯 Why This Exists
 
-This package is a playful exploration of combining AI with simple mathematical operations. While checking if a number is even is trivial (`number % 2 === 0`), sometimes you want to add a little magic and personality to your code. 
+This package is a playful exploration of combining AI with simple mathematical operations. While checking if a number is even is trivial (`number % 2 === 0`), sometimes you want to add AI reasoning and confidence scoring to your mathematical operations. 
 
 Perfect for:
 - 🎮 Fun side projects
 - 🎨 Creative coding experiments
 - 🧪 Testing AI integration patterns
-- 😄 Making your math operations more entertaining
+- 🤖 Adding AI explanations to mathematical operations
 - 🎪 Demonstrating API integration in workshops
 
 ## 🔒 Security & Privacy
@@ -178,7 +175,7 @@ Found a bug or have a feature idea? Open an issue or submit a PR!
 
 - OpenAI for making AI accessible
 - The mathematical concept of even numbers (ancient mathematicians)
-- You, for appreciating the absurdity of AI-powered modulo operations
+- You, for exploring AI-powered mathematical operations
 
 ---
 

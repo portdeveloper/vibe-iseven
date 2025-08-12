@@ -11,7 +11,6 @@ export interface VibeIsEvenResult {
   isEven: boolean;
   confidence: number;
   reasoning: string;
-  vibe: string;
 }
 
 export class VibeIsEven {
@@ -32,33 +31,31 @@ export class VibeIsEven {
   }
 
   /**
-   * Determines if a number is even using AI vibes
+   * Determines if a number is even using AI
    * @param number The number to check
-   * @returns Promise with the result including AI reasoning and vibe
+   * @returns Promise with the result including AI reasoning
    */
   async checkIsEven(number: number): Promise<VibeIsEvenResult> {
     if (!Number.isInteger(number)) {
       throw new Error('Input must be an integer');
     }
 
-    const prompt = `You are a mystical number whisperer with deep mathematical intuition. 
+    const prompt = `You are a mathematical assistant with deep analytical skills.
     
-Your task is to determine if the number ${number} is even or odd using your AI vibes and mathematical wisdom.
+Your task is to determine if the number ${number} is even or odd using mathematical reasoning.
 
 Please respond with a JSON object containing:
 - isEven: boolean (true if even, false if odd)
 - confidence: number between 0 and 1 (how confident you are)
 - reasoning: string (your mathematical reasoning)
-- vibe: string (describe the mystical vibe/energy you get from this number)
 
-Be creative with your reasoning and vibe description, but ensure the mathematical answer is correct.
+Ensure the mathematical answer is correct.
 
 Example format:
 {
   "isEven": true,
   "confidence": 0.95,
-  "reasoning": "The number divides evenly by 2 with no remainder",
-  "vibe": "This number radiates balanced, harmonious energy ✨"
+  "reasoning": "The number divides evenly by 2 with no remainder"
 }`;
 
     try {
@@ -89,8 +86,7 @@ Example format:
       // Validate the response structure
       if (typeof aiResult.isEven !== 'boolean' || 
           typeof aiResult.confidence !== 'number' ||
-          typeof aiResult.reasoning !== 'string' ||
-          typeof aiResult.vibe !== 'string') {
+          typeof aiResult.reasoning !== 'string') {
         throw new Error('Invalid response structure from AI');
       }
 
@@ -98,8 +94,7 @@ Example format:
         number,
         isEven: aiResult.isEven,
         confidence: Math.max(0, Math.min(1, aiResult.confidence)), // Clamp between 0-1
-        reasoning: aiResult.reasoning,
-        vibe: aiResult.vibe
+        reasoning: aiResult.reasoning
       };
 
     } catch (error) {
@@ -110,8 +105,7 @@ Example format:
           number,
           isEven,
           confidence: 1.0,
-          reasoning: `Mathematical calculation: ${number} % 2 = ${number % 2}`,
-          vibe: `The AI was feeling mysterious, but math says this number is ${isEven ? 'even' : 'odd'} ⚡`
+          reasoning: `Mathematical calculation: ${number} % 2 = ${number % 2}`
         };
       }
       throw error;
