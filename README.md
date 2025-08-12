@@ -1,34 +1,6 @@
 # 🔮 vibe-iseven
 
-> Determines if a number is even using OpenAI API - because why not add some AI magic to basic math!
-
-Have you ever wondered if a number is even, but wanted to get that answer with a mystical AI twist? Look no further! `vibe-iseven` combines the power of artificial intelligence with the ancient mathematical concept of even numbers to give you not just the answer, but the *vibe* behind it.
-
-## ✨ Features
-
-- 🤖 **AI-Powered**: Uses OpenAI's GPT models to determine if numbers are even
-- 🎭 **Mystical Vibes**: Get creative reasoning and energy readings for each number
-- 📊 **Confidence Scoring**: AI provides confidence levels for its mathematical intuition
-- 🛡️ **Fallback Logic**: Mathematical backup in case the AI gets too creative
-- 🚀 **TypeScript**: Full type safety and IntelliSense support
-- ⚡ **Batch Processing**: Check multiple numbers at once
-
-## 🚀 Installation
-
-```bash
-npm install vibe-iseven
-```
-
-## 🔑 Setup
-
-You'll need an OpenAI API key. Get one from [OpenAI's website](https://platform.openai.com/api-keys).
-
-Set your API key as an environment variable:
-```bash
-export OPENAI_API_KEY="your-api-key-here"
-```
-
-Or pass it directly when creating the instance (see usage examples below).
+> Determines if a number is even using OpenAI API.
 
 ## 📖 Usage
 
@@ -98,6 +70,32 @@ try {
   console.error(error.message); // "OpenAI API key is required..."
 }
 ```
+
+## ✨ Features
+
+- 🤖 **AI-Powered**: Uses OpenAI's GPT models to determine if numbers are even
+- 🎭 **Mystical Vibes**: Get creative reasoning and energy readings for each number
+- 📊 **Confidence Scoring**: AI provides confidence levels for its mathematical intuition
+- 🛡️ **Fallback Logic**: Mathematical backup in case the AI gets too creative
+- 🚀 **TypeScript**: Full type safety and IntelliSense support
+- ⚡ **Batch Processing**: Check multiple numbers at once
+
+## 🚀 Installation
+
+```bash
+npm install vibe-iseven
+```
+
+## 🔑 Setup
+
+You'll need an OpenAI API key. Get one from [OpenAI's website](https://platform.openai.com/api-keys).
+
+Set your API key as an environment variable:
+```bash
+export OPENAI_API_KEY="your-api-key-here"
+```
+
+Or pass it directly when creating the instance (see usage examples below).
 
 ## 🔧 API Reference
 
